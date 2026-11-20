@@ -1,4 +1,4 @@
-const B = 'http://localhost:8080/api';
+const B = (import.meta.env.VITE_API_URL || 'http://localhost:8080') + '/api';
 const token = () => JSON.parse(localStorage.getItem('user') || '{}').token as string | undefined;
 async function call<T = any>(path: string, method = 'GET', body?: unknown): Promise<T> {
   const t = token();

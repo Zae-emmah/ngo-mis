@@ -1,0 +1,35 @@
+.au{min-height:100vh;display:grid;grid-template-columns:1fr 1.45fr;background:#040a18;color:#e8eefc;font-family:system-ui,sans-serif}
+.au .au-side{width:auto;max-width:none;border-right:0;position:relative;overflow:hidden;padding:60px 56px 40px;display:flex;flex-direction:column;gap:26px;background:radial-gradient(500px 400px at 100% 100%,rgba(90,173,30,.35),transparent),linear-gradient(165deg,#05123a 0%,#0a2f8f 60%,#0a4a8a 100%)}
+.au-side::before{content:"";position:absolute;left:0;right:0;bottom:0;height:62%;background:url('/Images/signin.jpeg') center bottom/cover no-repeat;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 35%);mask-image:linear-gradient(to bottom,transparent 0,#000 35%);z-index:1;pointer-events:none}
+.au-side h2{font-size:46px;line-height:1.15;margin:60px 0 0;max-width:460px;position:relative;z-index:2;text-shadow:0 2px 12px rgba(0,0,40,.5)}
+.au-side h2 span{color:#7fd23a}
+.au-side ul{list-style:none;padding:0;margin:0;display:grid;gap:16px;color:#dbe6ff;font-size:18px;position:relative;z-index:2}
+.au-side li{display:flex;align-items:center;gap:14px}
+.au-art,.au-wave{display:none}
+.au .au-main{position:relative;display:flex;align-items:center;justify-content:center;padding:32px;min-width:0;background:radial-gradient(800px 600px at 90% 80%,rgba(10,108,240,.3),transparent),#040a18}
+.au-card{width:100%;max-width:400px;position:relative;z-index:2}
+.au-card h1{margin:0 0 6px;font-size:34px}
+.au-sub{color:#b8c7e6;margin:0 0 26px;font-size:18px}
+.au-card label{display:block;font-size:15px;font-weight:600;color:#e8eefc;margin-bottom:18px}
+.au-f{position:relative;display:flex;align-items:center;margin-top:8px;background:rgba(10,18,40,.8);border:1px solid #1d3a6b;border-radius:999px;padding:0 16px;color:#9db4e8;transition:border-color .15s,box-shadow .15s}
+.au-f:focus-within{border-color:#1a8cff;box-shadow:0 0 0 3px rgba(26,140,255,.2)}
+.au .au-f input{flex:1;min-width:0;width:auto;margin:0;background:none;border:0;outline:none;color:#fff;font-size:15px;font-weight:400;padding:14px 10px;box-shadow:none}
+.au-f input::placeholder{color:#6a7fae}
+.au .au-f button{background:none;border:0;color:#3d9bff;font-weight:700;font-size:14px;cursor:pointer;text-decoration:underline;padding:6px}
+.au-row{display:flex;justify-content:space-between;align-items:center;margin:-2px 0 22px;font-size:15px}
+.au-row a,.au-foot a{color:#3d9bff;font-weight:600;text-decoration:none}.au-row a:hover,.au-foot a:hover{text-decoration:underline}
+.au-card .au-check{display:flex;align-items:center;gap:10px;margin:0;font-weight:400;white-space:nowrap;color:#dbe6ff}
+.au .au-check input{display:inline-block;width:16px;height:16px;margin:0;padding:0}
+.au .au-btn{width:100%;padding:15px;border:0;border-radius:999px;background:linear-gradient(90deg,#0a6cf0,#1ab0ff);color:#fff;font-size:17px;font-weight:700;cursor:pointer;box-shadow:0 8px 28px rgba(10,140,255,.4);transition:transform .15s,opacity .15s}
+.au-btn:hover:not(:disabled){transform:translateY(-1px)}.au-btn:disabled{opacity:.6;cursor:wait}
+.au-msg{margin-top:16px;padding:12px 14px;border-radius:12px;font-size:14px}
+.au-msg.bad{background:rgba(255,80,80,.1);border:1px solid #6b2a2a;color:#ff9b9b}
+.au-msg.good{background:rgba(90,173,30,.12);border:1px solid #3d7a1e;color:#a6e36f}
+.au-foot{text-align:center;color:#dbe6ff;font-size:15px;margin-top:22px}
+@media(max-width:1000px){.au .au-side h2{font-size:34px}.au .au-side{padding:48px 36px 40px}}
+@media(max-width:800px){.au{grid-template-columns:1fr}.au .au-side{padding:24px 24px 160px}.au-side h2,.au-side ul{display:none}.au-side::before{height:100%}}
+
+.au .au-otp{display:flex;gap:10px;justify-content:space-between;margin:22px 0}
+.au .au-otp input{width:100%;max-width:54px;height:62px;margin:0;padding:0;text-align:center;font-size:26px;font-weight:700;background:rgba(10,18,40,.8);border:1px solid #1d3a6b;border-radius:14px;color:#fff;outline:none}
+.au .au-otp input:focus{border-color:#1a8cff;box-shadow:0 0 0 3px rgba(26,140,255,.2)}
+.au .au-link{background:none;border:0;padding:0;color:#3d9bff;font-weight:600;cursor:pointer;font-size:15px}

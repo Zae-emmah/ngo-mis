@@ -8,7 +8,7 @@ export default function Subscription() {
   const days = s.expiresAt ? Math.max(0, Math.ceil((s.expiresAt - Date.now()) / 864e5)) : 0;
   const activate = async () => {
     try { await api.subscribe({ plan: pick }); setM('Subscription updated'); setPick(null); load(); }
-    catch (e: any) { setM(e.message === '409' ? 'You have more active users than this plan allows. Deactivate some users first.' : 'Could not update the subscription'); }
+    catch (e: any) { setM(e.message === '409' ? 'You have more active users than this plan allows. Deactivate some users first.' : e.message === '501' ? 'Online payments are not enabled yet. Please contact support to change your plan.' : 'Could not update the subscription'); }
   };
   return (<div><h2 className="pt">Subscription</h2><p className="ps">Manage your organization's plan.</p>
     <div className="panel" style={{ maxWidth: 560 }}>

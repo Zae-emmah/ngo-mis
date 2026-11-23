@@ -16,6 +16,7 @@ import Settings from './Settings';
 import Subscription from './Subscription';
 import Landing from './Landing';
 import Verify from './Verify';
+import Reset from './Reset';
 import { api } from './api';
 
 import './Theme.css';
@@ -286,6 +287,7 @@ export default function App() {
     <Routes>
       <Route path="/welcome" element={<Landing />} />
 
+      <Route path="/reset" element={<Reset />} />
       <Route path="/verify" element={<Verify />} />
 
       <Route path="/signin" element={<Auth mode="in" />} />

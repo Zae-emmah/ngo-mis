@@ -74,3 +74,5 @@
 .app textarea.in{width:100%;min-height:130px;padding:12px 16px;background:#0a1224;border:1px solid #1d3a6b;border-radius:14px;color:#fff;font-family:inherit;font-size:14px;outline:none;resize:vertical;margin-top:6px}
 .app textarea.in:focus{border-color:#1a8cff}
 .app input.in:disabled,.app textarea.in:disabled{opacity:.6;cursor:not-allowed}
+.app .tw{overflow-x:auto}.app table{min-width:560px}
+@media(max-width:760px){.app .side{overflow-x:auto;flex-wrap:nowrap;padding:10px;gap:6px}.app .side a{white-space:nowrap;flex:0 0 auto}.app .grid4,.app .grid2s,.app .plans{grid-template-columns:1fr}.app .content{padding:16px}}

@@ -67,7 +67,7 @@ function System() {
 
 export default function Settings() {
   const admin = getU().role === 'Administrator';
-  const tabs = ['Account', 'Profile', 'Organization', ...(admin ? ['Users & Roles'] : []), 'System']; const [tab, setTab] = useState('Account');
+  const tabs = ['Account', 'Profile', ...(admin ? ['Organization', 'Users & Roles'] : []), 'System']; const [tab, setTab] = useState('Account');
   return (<div><h2 className="pt">Settings</h2><p className="ps">Manage your account and organization.</p>
     <div className="tabs">{tabs.map(t => <button key={t} className={t === tab ? 'on' : ''} onClick={() => setTab(t)}>{t}</button>)}</div>
     {tab === 'Account' && <Account />}{tab === 'Profile' && <Profile />}{tab === 'Organization' && <Org />}{tab === 'Users & Roles' && <Users />}{tab === 'System' && <System />}</div>);

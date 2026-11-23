@@ -11,8 +11,8 @@ export function Dashboard() {
   return (<div>
     <h2 className="pt">Welcome back{name ? ', ' + name : ''} 👋</h2><p className="ps">Here is what is happening across your programs.</p>
     <div className="grid4">
-      <div className="panel stat"><small>Active Projects</small><b>{p.length}</b></div>
-      <div className="panel stat b"><small>Beneficiaries Reached</small><b>{b.length}</b></div>
+      <div className="panel stat"><small>Active Projects</small><b>{p.filter(x => !['Completed', 'Closed'].includes(x.status)).length}</b></div>
+      <div className="panel stat b"><small>Beneficiaries</small><b>{b.length}</b></div>
       <div className="panel stat g"><small>Total Budget</small><b>${total.toLocaleString()}</b></div>
       <div className="panel stat r"><small>Projects At Risk</small><b>{risk}</b></div></div>
     <div className="grid2">

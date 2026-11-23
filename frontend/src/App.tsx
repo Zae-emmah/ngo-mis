@@ -157,7 +157,7 @@ function Shell() {
   return (
     <div className="app">
       <nav className="side">
-        <img src="/Images/civic.jpeg" alt="CiviCore" />
+        <img src="/Images/CiviCore.png" alt="CiviCore" />
 
         <div className="org">{u.orgName}</div>
 
